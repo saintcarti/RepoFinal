@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Evento</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="evento.nombre" name="nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha</ion-label>
+    <ion-input [(ngModel)]="evento.fecha" name="fecha" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Descripción</ion-label>
+    <ion-textarea [(ngModel)]="evento.descripcion" name="descripcion" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lugar</ion-label>
+    <ion-input [(ngModel)]="evento.lugar" name="lugar" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Imagen</ion-label>
+    <ion-input [(ngModel)]="evento.imagen" name="imagen"></ion-input>
+  </ion-item>
+
+  
+
+  <ion-button expand="full" (click)="updateEvent()">Actualizar Evento</ion-button>
+</ion-content>
